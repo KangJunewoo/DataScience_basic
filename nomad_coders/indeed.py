@@ -59,7 +59,7 @@ def extract_jobs(last_page):
   # for page in range(last_page):
   #코딩중에는 page=0으로 잡아서 단순하게.
   for page in range(last_page):
-    print(f'Scrapping page {page}')
+    print(f'Scrapping Indeed : page {page}')
     result=requests.get(f'{URL}&start={page*LIMIT}')
     soup=BeautifulSoup(result.text, 'html.parser')
     results=soup.find_all('div', {'class':'jobsearch-SerpJobCard'})
@@ -69,7 +69,12 @@ def extract_jobs(last_page):
       jobs.append(job)
   return jobs
 
+#조금만 가져오고 싶다면, 둘째줄에 1이나 2 넣자.
 def get_jobs():
+  '''
+  이 코드가 오리지날. 시간관계상 두 페이지만 스크레이핑해보자.
   last_page=get_last_page()
   jobs=extract_jobs(last_page)
+  '''
+  jobs=extract_jobs(2)
   return jobs

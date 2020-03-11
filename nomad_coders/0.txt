@@ -4,3 +4,6 @@
 2. requests 만들기
 3. 추출하기
 '''
+
+.get_text()와 .string의 차이
+비슷한듯.
