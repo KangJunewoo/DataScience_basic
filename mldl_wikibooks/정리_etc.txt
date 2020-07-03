@@ -1,4 +1,16 @@
 docker
+  설치가 꽤나 까다롭다.
+  나 포함 대부분 윈도우10 home을 쓰는데, 이 경우 docker toolbox를 사용해야 한다.
+  신경써야 할 점은 크게 다음과 같다.
 
+  1. 원래 virtualbox가 깔려있다면, 지우는게 좋다. 도커툴박스와 버전이 맞는 버츄얼박스를 사용해야 하기 때문.
+  2. cmd를 관리자모드로 열고,
+    bcdedit /set hypervisorlaunchtype off
+    를 쳐서 Hyper -v를 종료시킨 후 리부팅해야한다.
+    그렇지 않으면 'raw-mode is unavailable courtesy of Hyper -V' 오류가 뜨게 될 것이다.
+  3. 툴박스 설치하고 quickstart terminal을 '관리자 모드'로 실행해야 한다.
+    그렇게 하지 않으면 어디선가 오류가 뜰 것이다.
+    (나는 waiting for an IP... 에서 멈췄다. virtualbox 직접 들어가보니까 크래시가 난듯.)
+  4. 고래 보기 참 힘들다 ㅜㅜ 그래도 성공!!!
 
 jupyter notebook
